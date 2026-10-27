@@ -76,3 +76,7 @@ script in a plain tab: serve the repo with `python tools/serve.py 5290` and open
 | `src/content.js` / `content.css` | Finds flow rows, renders badges, popover and panel |
 | `src/lib/core.js` | Pure helpers shared by both and the tests |
 | `src/popup.*` | Session status and "Forget session" |
+
+## License
+
+MIT, see [LICENSE](LICENSE).
