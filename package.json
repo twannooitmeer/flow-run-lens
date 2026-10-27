@@ -1,0 +1,9 @@
+{
+  "name": "flow-run-lens",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chrome/Edge extension: cloud flow run details on Power Automate and Power Apps flow lists",
+  "scripts": {
+    "test": "node --test test/core.test.js test/background.test.js"
+  }
+}

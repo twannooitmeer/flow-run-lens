@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Flow Run Lens</title>
+  <style>
+    body { margin: 0; width: 280px; font: 13px/1.45 "Segoe UI", system-ui, sans-serif; color: #242424; background: #fff; }
+    main { padding: 12px 14px; }
+    h1 { font-size: 14px; margin: 0 0 8px; }
+    p { margin: 0 0 10px; }
+    .ok { color: #107c10; }
+    .warn { color: #c50f1f; }
+    button { font: inherit; padding: 3px 10px; border: 1px solid #d1d1d1; border-radius: 4px; background: #fff; cursor: pointer; }
+    small { color: #616161; display: block; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Flow Run Lens</h1>
+    <p id="status">Checking…</p>
+    <button id="forget" type="button">Forget session</button>
+    <small>The extension reuses your Power Automate sign-in for this browser session only. Nothing is stored on disk or sent anywhere but the Microsoft APIs it was issued for.</small>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

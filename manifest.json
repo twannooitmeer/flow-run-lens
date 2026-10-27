@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Flow Run Lens",
+  "version": "0.1.0",
+  "description": "Shows cloud flow run details (last run, recent results, errors) on flow lists in make.powerautomate.com and make.powerapps.com.",
+  "minimum_chrome_version": "116",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["webRequest", "storage"],
+  "host_permissions": [
+    "https://make.powerautomate.com/*",
+    "https://make.powerapps.com/*",
+    "https://*.api.powerplatform.com/*",
+    "https://api.flow.microsoft.com/*",
+    "https://*.api.flow.microsoft.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://make.powerautomate.com/*", "https://make.powerapps.com/*"],
+      "js": ["src/lib/core.js", "src/content.js"],
+      "css": ["src/content.css"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_title": "Flow Run Lens",
+    "default_popup": "src/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+    }
+  }
+}
